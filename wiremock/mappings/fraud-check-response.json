@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/api/fraud-check"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"fraudulent\": false}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

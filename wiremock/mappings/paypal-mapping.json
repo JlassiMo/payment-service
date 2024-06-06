@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/payments/payment"
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"id\": \"12345\", \"status\": \"COMPLETED\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

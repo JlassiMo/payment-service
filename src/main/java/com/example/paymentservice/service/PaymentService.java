@@ -1,6 +1,7 @@
 package com.example.paymentservice.service;
 
 import com.example.paymentservice.model.PaymentProviderType;
+import com.example.paymentservice.model.PaymentRequest;
 import com.example.paymentservice.model.PaymentTransaction;
 import com.example.paymentservice.observer.Observer;
 import com.example.paymentservice.observer.Subject;
@@ -31,24 +32,24 @@ public class PaymentService implements Subject {
         this.paymentProvider = paymentProviderFactory.getPaymentProvider(providerType);
     }
 
-    public void processPayment(double amount) {
+    public void processPayment(PaymentRequest request) {
         if (paymentProvider == null) {
             throw new IllegalStateException("Payment provider not set");
         }
 
         // Check for fraud
-        boolean isFraudulent = fraudDetectionService.isFraudulent(amount);
+        boolean isFraudulent = fraudDetectionService.isFraudulent(request.getAmount());
         if (isFraudulent) {
             throw new IllegalArgumentException("Fraudulent transaction detected");
         }
 
-        // Process payment
-        paymentProvider.processPayment(amount);
+        // Process payment using the provider
+        paymentProvider.processPayment(request);
 
         // Save transaction
         PaymentTransaction transaction = new PaymentTransaction();
         transaction.setProvider(paymentProvider.getClass().getSimpleName());
-        transaction.setAmount(amount);
+        transaction.setAmount(request.getAmount());
         transaction.setSuccessful(true);
         transactionRepository.save(transaction);
 

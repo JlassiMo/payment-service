@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v1/charges"
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"id\": \"ch_1GqIC8HYgolSBA35ZQG\", \"status\": \"succeeded\" }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

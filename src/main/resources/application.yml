@@ -12,11 +12,12 @@ spring:
       ddl-auto: update
     show-sql: true
 external:
-  fraud-service-url: http://localhost:8081/api/fraud-check
+  fraud-service-url: http://localhost:8080/api/fraud-check
   payment:
-    paypal:
-      url: https://api.paypal.com/v1/payments/payment
-    stripe:
-      url: https://api.stripe.com/v1/charges
-    square:
-      url: https://connect.squareup.com/v2/payments
+    providers:
+      paypal:
+        url: https://api.paypal.com/v1/payments/payment
+      stripe:
+        url: https://api.stripe.com/v1/charges
+      square:
+        url: https://connect.squareup.com/v2/payments

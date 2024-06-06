@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/v2/payments"
+  },
+  "response": {
+    "status": 200,
+    "body": "{ \"payment\": { \"id\": \"Jq74mCczmFXk1tC10GB\", \"status\": \"COMPLETED\" } }",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
