@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+external:
+  fraud-service-url: http://localhost:8081/api/fraud-check
+  payment:
+    paypal:
+      url: https://api.paypal.com/v1/payments/payment
+    stripe:
+      url: https://api.stripe.com/v1/charges
+    square:
+      url: https://connect.squareup.com/v2/payments
