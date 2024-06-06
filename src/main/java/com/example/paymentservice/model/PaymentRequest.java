@@ -8,8 +8,9 @@ public class PaymentRequest {
     @NotNull(message = "Provider is mandatory")
     private PaymentProviderType provider;
 
+    @NotNull(message = "Amount is mandatory")
     @Min(value = 0, message = "Amount must be greater than or equal to 0")
-    private double amount;
+    private Double amount;
 
     // Getters and setters
     public PaymentProviderType getProvider() {

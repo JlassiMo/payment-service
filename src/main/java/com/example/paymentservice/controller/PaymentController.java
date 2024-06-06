@@ -24,6 +24,6 @@ public class PaymentController {
     public ResponseEntity<String> processPayment(@Valid @RequestBody PaymentRequest paymentRequest) {
         paymentService.setPaymentProvider(paymentRequest.getProvider());
         paymentService.processPayment(paymentRequest);
-        return ResponseEntity.ok("Payment processed successfully");
+        return ResponseEntity.ok(String.format( "%s payment processed successfully", paymentRequest.getProvider()));
     }
 }
