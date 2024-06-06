@@ -274,3 +274,7 @@ How the Application Works
 4.  **Providers**: Different providers (PayPalProvider, StripeProvider, SquareProvider) process payments through their respective APIs.
 
 5.  **Observers**: Observers are notified about the transaction and perform their specific actions (logging, analytics, notifications).
+
+### Class Diagram
+
+![img.png](img.png)
