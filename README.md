@@ -278,3 +278,4 @@ How the Application Works
 ### Class Diagram
 
 ![img.png](img.png)
+[classDiagramPaymentService.drawio.pdf](https://github.com/user-attachments/files/15687190/classDiagramPaymentService.drawio.pdf)
