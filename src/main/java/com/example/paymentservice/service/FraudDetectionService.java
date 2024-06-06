@@ -1,5 +1,6 @@
 package com.example.paymentservice.service;
 
+import com.example.paymentservice.model.FraudCheckRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -18,7 +19,7 @@ public class FraudDetectionService {
     public boolean isFraudulent(double amount) {
         return Boolean.TRUE.equals(webClient.post()
                 .uri("/check")
-                .bodyValue(amount)
+                .bodyValue(new FraudCheckRequest(amount))
                 .retrieve()
                 .bodyToMono(Boolean.class)
                 .block());

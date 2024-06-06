@@ -1,11 +1,11 @@
 {
   "request": {
     "method": "POST",
-    "url": "/api/fraud-check"
+    "url": "/api/fraud-check/check"
   },
   "response": {
     "status": 200,
-    "body": "{\"fraudulent\": false}",
+    "body": "false",
     "headers": {
       "Content-Type": "application/json"
     }

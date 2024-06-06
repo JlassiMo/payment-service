@@ -5,4 +5,4 @@ services:
     ports:
       - "9561:8080"
     volumes:
-      - ./mappings:/home/wiremock/mappings
+      - ../wiremock/mappings:/home/wiremock/mappings
