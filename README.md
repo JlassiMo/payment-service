@@ -33,10 +33,48 @@ Used to create objects without specifying the exact class of object that will be
 Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This pattern is used to notify different components (logging, analytics, notifications) about payment transactions.
 
 ## Prerequisites
-### JDK 11 or higher
+### 1. JDK 11 or higher
 
-### Maven
-#### MacOS
+
+### 2. Maven
+#### 2.1 Windows
+
+##### Step 1: Download Maven
+Go to the [Apache Maven download page](https://maven.apache.org/download.cgi) and download the binary zip archive.
+
+##### Step 2: Extract the Archive
+Extract the downloaded zip archive to the directory where you want Maven to be installed. For example, you can extract it to `C:\Program Files\Apache\maven`.
+
+##### Step 3: Configure Environment Variables
+1. Open the Start Search, type in "env", and select "Edit the system environment variables".
+2. In the System Properties window, click on the "Environment Variables" button.
+3. Under "System variables", find the `Path` variable, select it, and click "Edit".
+4. Click "New" and add the path to the `bin` directory of the extracted Maven directory (e.g., `C:\Program Files\Apache\maven\bin`).
+5. Click "OK" to close all windows.
+
+##### Step 4: Verify the Installation
+Open a new Command Prompt and run the following command to verify that Maven is installed correctly:
+
+```sh
+mvn -version
+```
+
+You should see output similar to the following, which indicates Maven is installed and ready to use:
+
+```sh
+Apache Maven 3.x.x (where x.x is the version number)
+Maven home: C:\Program Files\Apache\maven
+Java version: 11.x.x, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk-11.x.x
+Default locale: en_US, platform encoding: Cp1252
+OS name: "windows", version: "10", arch: "amd64", family: "windows"
+```
+
+##### Additional Information
+- **Update Maven**: To update Maven in the future, download the latest version from the [Apache Maven download page](https://maven.apache.org/download.cgi) and repeat the installation steps.
+- **Uninstall Maven**: To uninstall Maven, simply delete the Maven directory and remove the Maven path from the `Path` environment variable.
+
+
+#### 2.2 MacOS
 To install Maven on a Mac, you can use Homebrew, which is a popular package manager for macOS. Here’s a step-by-step guide:
 
 ##### Step 1: Install Homebrew (if not already installed)
