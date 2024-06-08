@@ -92,7 +92,7 @@ Update application.yml with your configuration if needed.
 ### 3\. Run the Application
 
 ```sh
- ./mvnw spring-boot:run   `
+ ./mvnw spring-boot:run
 ```
 ### 4\. Access the H2 Console
 
