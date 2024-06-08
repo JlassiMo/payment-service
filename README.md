@@ -33,9 +33,49 @@ Used to create objects without specifying the exact class of object that will be
 Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This pattern is used to notify different components (logging, analytics, notifications) about payment transactions.
 
 ## Prerequisites
+### JDK 11 or higher
 
-- JDK 11 or higher
-- Maven
+### Maven
+#### MacOS
+To install Maven on a Mac, you can use Homebrew, which is a popular package manager for macOS. Here’s a step-by-step guide:
+
+##### Step 1: Install Homebrew (if not already installed)
+If you don't have Homebrew installed, open Terminal and run the following command:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Follow the on-screen instructions to complete the installation.
+
+##### Step 2: Install Maven
+Once Homebrew is installed, you can easily install Maven by running:
+
+```sh
+brew install maven
+```
+
+##### Step 3: Verify the Installation
+After the installation is complete, verify that Maven is installed correctly by checking the version:
+
+```sh
+mvn -version
+```
+
+You should see output similar to the following, which indicates Maven is installed and ready to use:
+
+```sh
+Apache Maven 3.x.x (where x.x is the version number)
+Maven home: /usr/local/Cellar/maven/3.x.x/libexec
+Java version: 11.x.x, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.x.x.jdk/Contents/Home
+Default locale: en_US, platform encoding: UTF-8
+OS name: "mac os x", version: "10.15.x", arch: "x86_64", family: "mac"
+```
+
+##### Additional Information
+- **Update Maven**: To update Maven in the future, you can run `brew upgrade maven`.
+- **Uninstall Maven**: If you ever need to uninstall Maven, you can do so with `brew uninstall maven`.
+
 
 ## Running the Application
 
