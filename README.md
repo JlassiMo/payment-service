@@ -34,6 +34,96 @@ Defines a one-to-many dependency between objects so that when one object changes
 
 ## Prerequisites
 ### 1. JDK 11 or higher
+#### 1.1 Windows
+
+##### Step 1: Download the Java JDK
+Go to the [Oracle JDK download page](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) and download the installer for Windows.
+
+##### Step 2: Install the Java JDK
+Run the downloaded installer and follow the on-screen instructions to complete the installation.
+
+##### Step 3: Configure Environment Variables
+1. Open the Start Search, type in "env", and select "Edit the system environment variables".
+2. In the System Properties window, click on the "Environment Variables" button.
+3. Under "System variables", click "New" to add a new variable.
+   - Variable name: `JAVA_HOME`
+   - Variable value: `C:\Program Files\Java\jdk-11.x.x` (replace with your actual JDK installation path)
+4. Find the `Path` variable, select it, and click "Edit".
+5. Click "New" and add the path to the `bin` directory of the JDK installation (e.g., `C:\Program Files\Java\jdk-11.x.x\bin`).
+6. Click "OK" to close all windows.
+
+##### Step 4: Verify the Installation
+Open a new Command Prompt and run the following command to verify that Java is installed correctly:
+
+```sh
+java -version
+```
+
+You should see output similar to the following, which indicates Java is installed and ready to use:
+
+```sh
+java version "11.x.x" (where x.x is the version number)
+Java(TM) SE Runtime Environment (build 11.x.x)
+Java HotSpot(TM) 64-Bit Server VM (build 11.x.x, mixed mode)
+```
+
+##### Additional Information
+- **Update Java JDK**: To update the Java JDK in the future, download the latest version from the [Oracle JDK download page](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) and repeat the installation steps.
+- **Uninstall Java JDK**: To uninstall the Java JDK, go to "Programs and Features" in the Control Panel, find the Java SE Development Kit, and uninstall it.
+
+
+#### 2.2 MacOS
+
+##### Step 1: Download the Java JDK
+Go to the [Oracle JDK download page](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) and download the installer for macOS.
+
+##### Step 2: Install the Java JDK
+Run the downloaded installer and follow the on-screen instructions to complete the installation.
+
+##### Step 3: Configure Environment Variables
+1. Open Terminal.
+2. Open the profile file in a text editor. You can use nano for this:
+   ```sh
+   nano ~/.bash_profile
+   ```
+   If you are using zsh (default on macOS Catalina and later), edit the `.zshrc` file instead:
+   ```sh
+   nano ~/.zshrc
+   ```
+3. Add the following lines to set the `JAVA_HOME` environment variable:
+   ```sh
+   export JAVA_HOME=$(/usr/libexec/java_home)
+   export PATH=$JAVA_HOME/bin:$PATH
+   ```
+4. Save the file and exit the text editor (Ctrl+O to save and Ctrl+X to exit in nano).
+5. Apply the changes by running:
+   ```sh
+   source ~/.bash_profile
+   ```
+   Or for zsh:
+   ```sh
+   source ~/.zshrc
+   ```
+
+##### Step 4: Verify the Installation
+Open a new Terminal window and run the following command to verify that Java is installed correctly:
+
+```sh
+java -version
+```
+
+You should see output similar to the following, which indicates Java is installed and ready to use:
+
+```sh
+java version "11.x.x" (where x.x is the version number)
+Java(TM) SE Runtime Environment (build 11.x.x)
+Java HotSpot(TM) 64-Bit Server VM (build 11.x.x, mixed mode)
+```
+
+##### Additional Information
+- **Update Java JDK**: To update the Java JDK in the future, download the latest version from the [Oracle JDK download page](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) and repeat the installation steps.
+- **Uninstall Java JDK**: To uninstall the Java JDK, delete the JDK directory from `/Library/Java/JavaVirtualMachines` and remove the `JAVA_HOME` entry from your profile file.
+
 
 
 ### 2. Maven
